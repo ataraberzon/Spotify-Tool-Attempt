@@ -90,7 +90,7 @@
 /* =========================
    CONFIG - REPLACE CLIENT_ID
    ========================= */
-const CLIENT_ID = 'YOUR_SPOTIFY_CLIENT_ID_HERE'; // <<--- replace
+const CLIENT_ID = 'd94ced667fed4edfb6afc6d52479aa5e'; // <<--- replace
 const REDIRECT_URI = window.location.origin + '/'; // make sure this exact URL is in your Spotify app Redirect URIs
 const SCOPES = 'playlist-read-private playlist-read-collaborative user-read-private'; // scopes used if you want to access user's playlists
 
