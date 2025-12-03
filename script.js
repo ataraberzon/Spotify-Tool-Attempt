@@ -395,3 +395,15 @@ window.addEventListener('keydown', (e)=>{
     else audio.pause();
   }
 });
+(async function init(){
+  try {
+    await handleRedirectCallback();
+  } catch(e){ console.warn('Callback handling failed', e); }
+  
+  accessToken = sessionStorage.getItem('sp_access_token') || accessToken;
+  updateAuthUI();
+
+  if(!accessToken){
+    console.log('Not signed in. Click "Sign in with Spotify"');
+  }
+})();
