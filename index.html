@@ -1,1 +1,58 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Playlist Preview Browser — Old Spotify List Style</title>
+
+<!-- LINK TO SEPARATE FILES -->
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
+</head>
+<body>
+
+<header class="container">
+  <div style="flex:1">
+    <h1>Playlist Preview Browser (Old List UI)</h1>
+    <div class="small">Click any track to preview instantly — scroll freely.</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px">
+    <div id="auth-status" class="status">Not signed in</div>
+  </div>
+</header>
+
+<main class="container" id="app">
+  <section class="controls" style="margin-bottom:6px">
+    <input id="playlistUrl" placeholder="Paste Spotify playlist link (or playlist id)" />
+    <button id="loadBtn">Load playlist</button>
+    <button id="myPlaylistsBtn" class="ghost">Browse my playlists</button>
+    <button id="signBtn" class="ghost">Sign in with Spotify</button>
+  </section>
+
+  <div id="playlistArea" style="display:none">
+    <div class="playlist-info">
+      <div class="cover" id="plistCover"></div>
+      <div class="pmeta">
+        <div class="title" id="plistTitle">Playlist Title</div>
+        <div class="sub" id="plistOwner">by … · <span id="plistCount">0</span> tracks</div>
+      </div>
+    </div>
+
+    <div id="list" class="list" aria-live="polite"></div>
+    <div id="loader" class="loader" style="display:none">Loading…</div>
+  </div>
+
+  <div id="pickArea" style="display:none">
+    <h3>Your playlists</h3>
+    <div id="myLists"></div>
+  </div>
+</main>
+
+<footer>
+  Built for personal use. Spotify preview clips are provided by Spotify. If a track has no preview, a clip isn’t available.
+</footer>
+
+</body>
+</html>
